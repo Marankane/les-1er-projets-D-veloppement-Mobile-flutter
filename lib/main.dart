@@ -87,10 +87,10 @@ class BalaguroApp extends StatelessWidget {
           ),
         ),
         scaffoldBackgroundColor: const Color(0xFFF2F6FC),
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           elevation: 0,
           scrolledUnderElevation: 0,
-          backgroundColor: Color(0xFF3E6D9C),
+          backgroundColor: primary,
           foregroundColor: Colors.white,
           centerTitle: false,
         ),
@@ -121,12 +121,12 @@ class BalaguroApp extends StatelessWidget {
             ),
           ),
         ),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Color(0xFF3E6D9C),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: primary,
           foregroundColor: Colors.white,
         ),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: Color(0xFF3E6D9C),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: primary,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
           selectedLabelStyle: TextStyle(color: Colors.white),
