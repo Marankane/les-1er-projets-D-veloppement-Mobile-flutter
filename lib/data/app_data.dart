@@ -1,0 +1,248 @@
+import '../models/booking.dart';
+import '../models/company.dart';
+import '../models/offer.dart';
+import '../models/trip.dart';
+
+class AppData {
+  static const companies = <Company>[
+    Company(
+      name: 'STM',
+      logo: 'assets/stm.png',
+      rating: 4.7,
+      vehicleType: 'Bus climatise',
+      description:
+          'STM assure des liaisons regulieres entre les regions du Niger avec une flotte confortable.',
+      services: 'Climatisation, TV, bagages, prises USB',
+      phone: '+227 12 34 56 78',
+      destinations: ['Niamey -> Zinder', 'Niamey -> Maradi', 'Niamey -> Dosso'],
+    ),
+    Company(
+      name: 'Salim Transport',
+      logo: 'assets/bus.png',
+      rating: 4.3,
+      vehicleType: 'Bus standard',
+      description:
+          'Salim Transport propose des departs quotidiens vers plusieurs capitales regionales.',
+      services: 'Bagages, climatisation, assistance',
+      phone: '+227 93 22 33 44',
+      destinations: ['Niamey -> Tahoua', 'Maradi -> Tahoua'],
+    ),
+    Company(
+      name: '3STV Transport',
+      logo: 'assets/bus1.png',
+      rating: 4.1,
+      vehicleType: 'Minibus',
+      description:
+          '3STV Transport dessert les lignes frequentes avec des minibus rapides.',
+      services: 'Bagages, places reservees',
+      phone: '+227 94 00 11 22',
+      destinations: ['Zinder -> Diffa', 'Niamey -> Maradi'],
+    ),
+    Company(
+      name: 'RIMBO Transport',
+      logo: 'assets/rimbo.png',
+      rating: 4.5,
+      vehicleType: 'Bus climatise',
+      description:
+          'RIMBO Transport couvre les grandes villes avec des departs matin et soir.',
+      services: 'Climatisation, TV, bagages',
+      phone: '+227 87 65 43 21',
+      destinations: ['Niamey -> Agadez', 'Niamey -> Tahoua'],
+    ),
+    Company(
+      name: 'AL IZZA Transport',
+      logo: 'assets/amana.png',
+      rating: 4.2,
+      vehicleType: 'Autocar',
+      description:
+          'AL IZZA Transport met l accent sur la ponctualite et le confort.',
+      services: 'Climatisation, bagages, eau',
+      phone: '+227 95 45 45 45',
+      destinations: ['Niamey -> Dosso', 'Niamey -> Maradi'],
+    ),
+    Company(
+      name: 'AZAWAD Transport',
+      logo: 'assets/sonef.png',
+      rating: 4.0,
+      vehicleType: 'Bus longue distance',
+      description:
+          'AZAWAD Transport relie les zones nord et centre avec des trajets longue distance.',
+      services: 'Bagages, climatisation',
+      phone: '+227 96 88 77 66',
+      destinations: ['Niamey -> Agadez', 'Agadez -> Arlit'],
+    ),
+    Company(
+      name: 'Niger Voyage Express',
+      logo: 'assets/bus.png',
+      rating: 3.9,
+      vehicleType: 'Minibus inter-ville',
+      description:
+          'Compagnie locale pour les dessertes regionales et les trajets de proximite.',
+      services: 'Bagages, assistance',
+      phone: '+227 90 10 10 10',
+      destinations: ['Dosso -> Gaya', 'Niamey -> Dosso'],
+    ),
+    Company(
+      name: 'Rimbo International',
+      logo: 'assets/rimbo.png',
+      rating: 4.4,
+      vehicleType: 'Bus international',
+      description: 'Liaisons transfrontalieres vers les pays limitrophes.',
+      services: 'Climatisation, bagages, assistance frontiere',
+      phone: '+227 91 11 22 33',
+      destinations: ['Niamey -> Cotonou', 'Niamey -> Ouagadougou'],
+      category: 'International',
+    ),
+    Company(
+      name: 'STM International',
+      logo: 'assets/stm.png',
+      rating: 4.5,
+      vehicleType: 'Autocar international',
+      description: 'Lignes internationales avec reservation simplifiee.',
+      services: 'TV, climatisation, bagages',
+      phone: '+227 92 22 33 44',
+      destinations: ['Niamey -> Lagos', 'Niamey -> Accra'],
+      category: 'International',
+    ),
+  ];
+
+  static const trips = <Trip>[
+    Trip(
+      companyName: 'STM',
+      from: 'Niamey',
+      to: 'Zinder',
+      time: '08:00',
+      duration: '6h20',
+      distanceKm: 900,
+      price: 5000,
+      isClimatise: true,
+    ),
+    Trip(
+      companyName: 'STM',
+      from: 'Niamey',
+      to: 'Maradi',
+      time: '12:00',
+      duration: '8h00',
+      distanceKm: 660,
+      price: 4500,
+      isClimatise: true,
+    ),
+    Trip(
+      companyName: 'RIMBO Transport',
+      from: 'Niamey',
+      to: 'Tahoua',
+      time: '15:00',
+      duration: '5h15',
+      distanceKm: 550,
+      price: 6000,
+      isClimatise: true,
+    ),
+    Trip(
+      companyName: 'RIMBO Transport',
+      from: 'Niamey',
+      to: 'Agadez',
+      time: '20:00',
+      duration: '12h00',
+      distanceKm: 930,
+      price: 7000,
+      isClimatise: true,
+    ),
+    Trip(
+      companyName: '3STV Transport',
+      from: 'Zinder',
+      to: 'Diffa',
+      time: '10:30',
+      duration: '4h30',
+      distanceKm: 410,
+      price: 4200,
+      isClimatise: false,
+    ),
+    Trip(
+      companyName: 'Salim Transport',
+      from: 'Maradi',
+      to: 'Tahoua',
+      time: '07:45',
+      duration: '5h50',
+      distanceKm: 430,
+      price: 4800,
+      isClimatise: false,
+    ),
+    Trip(
+      companyName: 'AL IZZA Transport',
+      from: 'Niamey',
+      to: 'Dosso',
+      time: '09:15',
+      duration: '2h00',
+      distanceKm: 140,
+      price: 2500,
+      isClimatise: true,
+    ),
+    Trip(
+      companyName: 'AZAWAD Transport',
+      from: 'Agadez',
+      to: 'Arlit',
+      time: '06:50',
+      duration: '3h20',
+      distanceKm: 240,
+      price: 3900,
+      isClimatise: false,
+    ),
+    Trip(
+      companyName: 'Rimbo International',
+      from: 'Niamey',
+      to: 'Cotonou',
+      time: '05:30',
+      duration: '10h30',
+      distanceKm: 1030,
+      price: 12000,
+      isClimatise: true,
+    ),
+  ];
+
+  static const bookings = <Booking>[
+    Booking(
+      companyName: 'STM',
+      from: 'Niamey',
+      to: 'Zinder',
+      date: '05/03/2026',
+      time: '08:00',
+      seat: 'A12',
+      status: 'Confirme',
+      price: 5000,
+    ),
+    Booking(
+      companyName: 'RIMBO Transport',
+      from: 'Niamey',
+      to: 'Tahoua',
+      date: '07/03/2026',
+      time: '15:00',
+      seat: 'B04',
+      status: 'En attente',
+      price: 6000,
+    ),
+  ];
+
+  static const offers = <Offer>[
+    Offer(
+      title: 'Promo Etudiant',
+      description: 'Reduction sur les trajets inter-urbains.',
+      code: 'ETUDIANT10',
+      discountPercent: 10,
+      validity: 'Valable jusqu au 31/03/2026',
+    ),
+    Offer(
+      title: 'Weekend Famille',
+      description: 'Billet enfant a tarif reduit.',
+      code: 'FAMILY15',
+      discountPercent: 15,
+      validity: 'Valable chaque vendredi a dimanche',
+    ),
+    Offer(
+      title: 'Reservation Anticipee',
+      description: 'Moins cher si vous reservez 72h avant.',
+      code: 'EARLY20',
+      discountPercent: 20,
+      validity: 'Valable toute l annee',
+    ),
+  ];
+}
